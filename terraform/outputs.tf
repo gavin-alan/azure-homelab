@@ -13,3 +13,11 @@ output "acr_login_server" {
 output "acr_name" {
   value = module.acr.name
 }
+
+output "app_url" {
+  value = "http://${module.container.fqdn}:8000"
+}
+
+output "app_ip" {
+  value = module.container.ip_address
+}

@@ -27,3 +27,15 @@ module "acr" {
   location            = module.resource_group.location
   tags                = var.tags
 }
+
+module "container" {
+  source              = "./modules/container"
+  name                = var.container_group_name
+  location            = module.resource_group.location
+  resource_group_name = module.resource_group.name
+  dns_name_label      = var.dns_name_label
+  acr_login_server    = module.acr.login_server
+  acr_username        = module.acr.admin_username
+  acr_password        = module.acr.admin_password
+  tags                = var.tags
+}

@@ -21,6 +21,18 @@ variable "acr_name" {
   default     = "gavinalanhomelab"
 }
 
+variable "container_group_name" {
+  description = "ACI container group name"
+  type        = string
+  default     = "azure-homelab-container"
+}
+
+variable "dns_name_label" {
+  description = "DNS name label (must be unique in region)"
+  type        = string
+  default     = "gavinalan-homelab"
+}
+
 variable "tags" {
   description = "Resource tags"
   type        = map(string)
