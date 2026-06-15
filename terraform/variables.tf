@@ -15,6 +15,12 @@ variable "location" {
   default     = "East US"
 }
 
+variable "acr_name" {
+  description = "ACR name (globally unique, alphanumeric only)"
+  type        = string
+  default     = "gavinalanhomelab"
+}
+
 variable "tags" {
   description = "Resource tags"
   type        = map(string)

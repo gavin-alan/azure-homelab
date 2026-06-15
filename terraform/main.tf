@@ -19,3 +19,11 @@ module "resource_group" {
   location = var.location
   tags     = var.tags
 }
+
+module "acr" {
+  source              = "./modules/acr"
+  name                = var.acr_name
+  resource_group_name = module.resource_group.name
+  location            = module.resource_group.location
+  tags                = var.tags
+}

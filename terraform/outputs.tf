@@ -1,9 +1,15 @@
 ﻿output "resource_group_name" {
-  description = "Name of the created resource group"
-  value       = module.resource_group.name
+  value = module.resource_group.name
 }
 
 output "resource_group_location" {
-  description = "Location of the resource group"
-  value       = module.resource_group.location
+  value = module.resource_group.location
+}
+
+output "acr_login_server" {
+  value = module.acr.login_server
+}
+
+output "acr_name" {
+  value = module.acr.name
 }
