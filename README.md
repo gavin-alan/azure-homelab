@@ -22,7 +22,7 @@ Replicate and adapt the AWS-based DevOps pipeline to Azure — same application,
 ## Phases
 
 - [x] Phase 1: Terraform scaffold + Azure provider + resource group
-- [ ] Phase 2: ACR + Docker + GitHub Actions CI/CD
+- [x] Phase 2: ACR + Docker image pushed
 - [ ] Phase 3: Container deployment (ACI or App Service)
 - [ ] Phase 4: Azure AI Services + FastAPI /ask endpoint
 - [ ] Phase 5: Azure Monitor + alerting
@@ -41,7 +41,9 @@ Replicate and adapt the AWS-based DevOps pipeline to Azure — same application,
 ## Live Resources
 
 - Resource Group: `azure-homelab-rg` (East US)
+- Container Registry: `gavinalanhomelab.azurecr.io`
+- Image: `gavinalanhomelab.azurecr.io/devops-homelab:latest`
 
 ## Status
 
-Phase 1 complete. Phase 2 in progress — ACR and GitHub Actions CI/CD.
+Phase 2 complete. Phase 3 in progress — container deployment to ACI.
